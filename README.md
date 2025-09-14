@@ -59,8 +59,7 @@ To access the Admin Dashboard and its features, log in with the following creden
 
 *User Profile:*
 
-![user_profile]
-(https://github.com/user-attachments/assets/0859cc26-03f8-48e6-878e-974ef0f9a981)
+![user_profile](https://github.com/user-attachments/assets/b1254298-f94a-445a-b644-6dc6ac0dc713)
 
 
 

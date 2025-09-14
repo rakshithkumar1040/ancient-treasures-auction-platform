@@ -27,7 +27,7 @@ This platform is a Single Page Application (SPA) that includes a wide range of f
 #### Admin Features
 * *Admin Dashboard:* A special dashboard for the admin user.
 * *Platform Statistics:* View total users, active auctions, and total revenue generated from commissions.
-* *User Management:* View all registered users, and *ban, **unban, or **delete* them.
+* *User Management:* View all registered users, and ban, unban, or delete them.
 * *Auction Management:* View all live and sold auctions, with the ability to delete any live auction.
 
 ---
@@ -60,6 +60,7 @@ To access the Admin Dashboard and its features, log in with the following creden
 *User Profile:*
 
 ![user_profile](https://github.com/user-attachments/assets/b1254298-f94a-445a-b644-6dc6ac0dc713)
+
 
 
 

@@ -1,9 +1,10 @@
 # Ancient Treasures Auction Platform 🏺
 
 A dynamic and feature-rich e-auction web application built entirely with vanilla HTML, CSS, and JavaScript. This project simulates a live auction platform for ancient artifacts, managing all user and item data on the client-side using the browser's localStorage.
+
+
 ![main_page](https://github.com/user-attachments/assets/ad3ba347-82a7-4115-966f-eec3832af688)
 
-![Ancient Treasures Screenshot](<PATH_TO_YOUR_SCREENSHOT>) ---
 
 ## ✨ Features
 
@@ -53,10 +54,11 @@ To access the Admin Dashboard and its features, log in with the following creden
 ## 🖼 Screenshots
 
 *Admin Dashboard:*
-![Admin Dashboard Screenshot](<PATH_TO_YOUR_SCREENSHOT>)
+
 <img width="1918" height="1027" alt="admin_profile" src="https://github.com/user-attachments/assets/66f9c9a3-cc3a-4371-ba7e-f61b5c896477" />
 
 *User Profile:*
-![User Profile Screenshot](<PATH_TO_YOUR_SCREENSHOT>)
+
 ![user_profile](https://github.com/user-attachments/assets/0859cc26-03f8-48e6-878e-974ef0f9a981)
+
 

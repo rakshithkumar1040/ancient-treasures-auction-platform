@@ -1,0 +1,59 @@
+/* css/responsive.css */
+/* Contains all @media queries for responsive design adjustments. */
+
+@media (max-width: 992px) {
+    nav ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .auth-buttons, .user-panel {
+        order: 2;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .auth-buttons, .user-panel {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    nav ul {
+        order: 2;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    nav li {
+        margin-left: 0;
+    }
+    
+    .item-detail-info {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-tabs {
+        justify-content: center;
+    }
+
+    .notification-dropdown {
+        width: 280px;
+        right: -50px;
+    }
+}

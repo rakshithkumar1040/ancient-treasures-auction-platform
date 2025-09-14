@@ -1,0 +1,255 @@
+/* css/components.css */
+/* Styles for reusable components like buttons, forms, and notifications. */
+
+/* Button Styles */
+.auth-buttons {
+    display: none; /* Controlled by JS */
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #6d4c41;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: #bcaaa4;
+    transform: translateY(-2px);
+}
+
+.btn-highlight {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+.btn-highlight:hover {
+    background-color: #ff8f00;
+    transform: translateY(-2px);
+}
+
+/* Form & Auth Container Styles */
+.auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.auth-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: var(--bg-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-error {
+    color: var(--error-color);
+    margin-top: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+.form-success {
+    color: var(--success-color);
+    margin-top: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+/* Notification System Styles */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--notification-badge);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.notification-dropdown.show {
+    display: block;
+}
+
+.notification-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.notification-clear {
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+.notification-icon.success { color: var(--success-color); }
+.notification-icon.warning { color: var(--warning-color); }
+.notification-icon.error { color: var(--error-color); }
+.notification-icon.admin { color: var(--admin-color); }
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-date {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+#notification-area {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification {
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+.notification.success { background-color: var(--success-color); }
+.notification.error { background-color: var(--error-color); }
+.notification.warning { background-color: var(--warning-color); color: var(--text-color); }
+.notification.admin { background-color: var(--admin-color); }
+.notification.info { background-color: #1976d2; }
+
+.notification-close {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+    padding-left: 15px;
+}

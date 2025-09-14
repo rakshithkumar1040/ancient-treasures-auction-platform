@@ -1,0 +1,66 @@
+/* css/home.css */
+/* Styles for the hero section on the homepage. */
+/* This file should only be included on index.html. */
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1200x400/?ancient,artifact');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 20s infinite;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideShow {
+    0%    { background-image: url('../images/coins.jpg'); }
+    14.28% { background-image: url('../images/Dice.jpg'); }
+    28.56% { background-image: url('../images/Pot.jpg'); }
+    42.84% { background-image: url('../images/Coin.jpg'); }
+    57.12% { background-image: url('../images/Statue.jpg'); }
+    71.4%  { background-image: url('../images/Pistol.jpg'); }
+    85.68% { background-image: url('../images/Cannon.jpg'); }
+    100%   { background-image: url('../images/coins.jpg'); } /* Loop back */
+}
+
+/* Responsive styles for Hero */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
